@@ -162,6 +162,3 @@ src/
 
 The images below are from the original Downtown Driving 3D city map.
 
-![Loading screen](Assets/loading.png)
-![View 1](Assets/view1.png)
-![View 2](Assets/view2.png)
