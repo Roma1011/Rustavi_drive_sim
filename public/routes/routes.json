@@ -1,0 +1,10 @@
+{
+  "routes": [
+    {
+      "id": "rustavi-route-1",
+      "file": "rustavi-route-1.geojson",
+      "name": "Rustavi route 1",
+      "description": "B-category practical exam practice route in Rustavi. GeoJSON LineString in WGS84 longitude/latitude."
+    }
+  ]
+}
