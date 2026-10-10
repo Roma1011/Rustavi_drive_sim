@@ -23,8 +23,6 @@ npm install
 npm run dev
 ```
 
-The dev server serves the app under the GitHub Pages base path:
-`http://localhost:5173/Downtown-Driving-3D/`
 
 Production build (type check + bundle):
 
@@ -138,7 +136,6 @@ When reversing, the camera stays behind the car so left and right are never mirr
 
 Push `main` to GitHub and enable `Settings > Pages > Source: GitHub Actions`.
 The included workflow builds and publishes the Vite app with the base path
-`/Downtown-Driving-3D/`.
 
 ## Structure
 
