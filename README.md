@@ -132,11 +132,6 @@ When reversing, the camera stays behind the car so left and right are never mirr
 - A route that passes within 6 m of itself is merged into one carriageway; parallel
   carriageways further apart are drawn as separate roads.
 
-## GitHub Pages
-
-Push `main` to GitHub and enable `Settings > Pages > Source: GitHub Actions`.
-The included workflow builds and publishes the Vite app with the base path
-
 ## Structure
 
 ```text
@@ -157,8 +152,4 @@ src/
     state/           simulator, route and exam stores
   shared/
 ```
-
-## Screenshots
-
-The images below are from the original Downtown Driving 3D city map.
 
