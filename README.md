@@ -153,3 +153,92 @@ src/
   shared/
 ```
 
+## Contributing
+
+### What you need
+
+- Git
+- Node.js 20 or newer and npm (check with `node -v` and `npm -v`)
+- A GitHub account with access to this repository
+- Any editor; VS Code with the ESLint/Prettier-style formatting of the existing files
+
+### Set up once
+
+```bash
+git clone https://github.com/Roma1011/Rustavi_drive_sim.git
+cd Rustavi_drive_sim
+npm install
+npm run dev
+```
+
+Open the URL that Vite prints in the terminal.
+
+### Workflow for every change
+
+`main` is the stable branch. Nobody commits to it directly; every change goes through a
+branch and a pull request.
+
+1. Update your local `main`:
+
+   ```bash
+   git checkout main
+   git pull origin main
+   ```
+
+2. Create a working branch from `main`. Use a short, descriptive name with a prefix:
+   `feature/`, `fix/`, `route/` or `docs/`, for example `feature/traffic-lights` or
+   `route/rustavi-route-2`.
+
+   ```bash
+   git checkout -b feature/short-description
+   ```
+
+3. Make your changes. Keep one topic per branch. Before committing, make sure the project
+   still builds:
+
+   ```bash
+   npm run build
+   ```
+
+4. Commit with a clear message that says what and why, in the imperative mood
+   (for example `Add stop-line markers from route point features`).
+
+   ```bash
+   git add .
+   git commit -m "Short summary of the change"
+   ```
+
+5. Push the branch and open a pull request on GitHub against `main`:
+
+   ```bash
+   git push -u origin feature/short-description
+   ```
+
+   In the pull request describe what changed, how you tested it, and add a screenshot
+   for visual changes.
+
+6. Wait for a review. Address comments with new commits on the same branch. The branch is
+   merged by the reviewer once it is approved and builds cleanly, then deleted.
+
+7. If `main` moved while you were working, bring your branch up to date before the merge:
+
+   ```bash
+   git checkout feature/short-description
+   git pull --rebase origin main
+   git push --force-with-lease
+   ```
+
+### Adding a route
+
+Put the GeoJSON file in `public/routes/`, add an entry to `public/routes/routes.json`
+(see "Route files" above), run the app and check the route in the selector, then open a
+pull request on a `route/...` branch.
+
+### Rules of thumb
+
+- Never force-push to `main`.
+- Do not commit `node_modules`, `dist` or personal editor settings.
+- Keep generated assets (textures, roads) procedural; only route data goes in `public/routes`.
+- Settings that change gameplay (speeds, widths, fault thresholds) live in
+  `src/features/simulator/config/simulator.config.ts`; change them there, not inline.
+
